@@ -2,7 +2,8 @@
     display:flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin: 4%;
+    margin: 4% auto;
+    width: 67%;
 }
 
 .smurf-card {
@@ -10,10 +11,47 @@
     display: flex;
     flex-flow: column;
     border: 1px solid darkblue;
-    width: 15%;
+    width: 10%;
+    font-size: 1.0rem;
     padding: 1%;
 }
 
 .smurf-card h4 {
     color:blue;
+    font-size: 1.3rem;
+    margin: 2%;
+}
+
+.smurf-card p{
+    margin: 1%;
+}
+
+.smurf-form-container{
+    display:flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.smurf-form {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1%;
+    width: 20%;
+    font-size: 1.9rem;
+    padding: 1%;
+    border: 3px dashed black;
+}
+
+.smurf-form input {
+    text-align: center;
+    padding: 2%;
+    font-size: 1.0rem;
+    margin: 1%;
+    border: 2px solid lightblue;
+}
+
+.smurf-form button{
+    font-size: 1.0rem;
+    margin: 1%;
 }

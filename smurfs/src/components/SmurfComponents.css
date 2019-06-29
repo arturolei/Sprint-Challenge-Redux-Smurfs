@@ -1,0 +1,19 @@
+.smurf-list-container {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 4%;
+}
+
+.smurf-card {
+    margin: 1%;
+    display: flex;
+    flex-flow: column;
+    border: 1px solid darkblue;
+    width: 15%;
+    padding: 1%;
+}
+
+.smurf-card h4 {
+    color:blue;
+}

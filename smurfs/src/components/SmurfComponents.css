@@ -9,9 +9,10 @@
 .smurf-card {
     margin: 1%;
     display: flex;
-    flex-flow: column;
+    flex-flow: column wrap;
+    align-items: center;
     border: 1px solid darkblue;
-    width: 10%;
+    width: 15%;
     font-size: 1.0rem;
     padding: 1%;
 }
@@ -24,6 +25,13 @@
 
 .smurf-card p{
     margin: 1%;
+}
+
+.smurf-card button {
+    font-size: 0.8rem;
+    margin: 4%;
+    padding:3%;
+    width: 50%;
 }
 
 .smurf-form-container{

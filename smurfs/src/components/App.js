@@ -8,7 +8,7 @@ import './App.css';
  */
 
 import { connect } from 'react-redux';
-import { getSmurfs, addSmurf} from '../actions';
+import { getSmurfs, addSmurf, deleteSmurf} from '../actions';
 import SmurfList from './SmurfList';
 import SmurfForm from './SmurfForm';
 
@@ -21,6 +21,10 @@ class App extends Component {
     this.props.addSmurf(smurf);
   }
 
+  deleteSmurf = id => {
+    this.props.deleteSmurf(id);
+  }
+
 
   render() {
     return (
@@ -29,7 +33,7 @@ class App extends Component {
         {( this.props.fetchingSmurfs || this.props.addingSmurf ) 
         && <p>STUFF IS LOADING. PLEASE WAIT</p>
         }
-        <SmurfList smurfs={this.props.smurfs} />
+        <SmurfList smurfs={this.props.smurfs} deleteSmurf = {this.deleteSmurf} />
         <SmurfForm addSmurf={this.addSmurf} />
       </div>
     );
@@ -44,4 +48,4 @@ const mapStateToProps = state => ({
   error: state.error,
 })
 
-export default connect(mapStateToProps,{getSmurfs,addSmurf})(App);
+export default connect(mapStateToProps,{getSmurfs,addSmurf, deleteSmurf})(App);
